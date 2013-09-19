@@ -1,0 +1,25 @@
+<h1>Listing an_entities</h1>
+
+<table>
+  <tr>
+    <th>Attr1</th>
+    <th>Attr2</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @an_entities.each do |an_entity| %>
+  <tr>
+    <td><%= an_entity.attr1 %></td>
+    <td><%= an_entity.attr2 %></td>
+    <td><%= link_to 'Show', an_entity %></td>
+    <td><%= link_to 'Edit', edit_an_entity_path(an_entity) %></td>
+    <td><%= link_to 'Destroy', an_entity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New An entity', new_an_entity_path %>

@@ -1,0 +1,2 @@
+module AnEntitiesHelper
+end
